@@ -1,0 +1,191 @@
+:root {
+    --base: #151726;
+    --interface: #1C1E2D;
+    --overlay:#232534;
+    --mint: #5bc8d0;
+    --focus: #3E404F;
+    --focus-high:#8D8F9E;
+    --text: #DEE0EF;
+    --coral: #EE8679;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+}
+::selection {
+    background-color: var(--mint);
+    color: var(--base);
+}
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: var(--base);
+    color: var(--text);
+}
+.buttonFrame {
+    height: 4em;
+    width: 15em;
+    background-color: var(--interface);
+    border: .2em solid var(--overlay);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: .2em;
+}
+button {
+    padding: .3em .4em;
+    background-color: transparent;
+    color: var(--text);
+    border: none;
+    border-radius: .2em;
+    font-size: .9em;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.contentFrame {
+    height: 15em;
+    width: 15em;
+    background-color: var(--interface);
+    border: .2em solid var(--overlay);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: .2em;
+}
+section {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* for active class start */
+.contentFrame .active {
+    display: flex;
+}
+.buttonFrame .active {
+    color: var(--base);
+    background-color: var(--mint);
+}
+/* for active class end */
+#tabContent1 .img-circle {
+    height: 6em;
+    width: 6em;
+    border: .15em solid var(--mint);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#tabContent1 .img-circle img {
+    width: 5.25em;
+    border-radius: 50%;
+}
+#tabContent1 .profile-info {
+    text-align: center;
+}
+#tabContent1 .profile-info h3 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+#tabContent1 .profile-info p {
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: .9em;
+    color: var(--focus-high);
+}
+#tabContent1 .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+#tabContent1 .buttons a {
+    padding: .1em 1em;
+    color: var(--text);
+    font-size: 1em;
+    background-color: var(--overlay);
+    border: .15em solid var(--focus);
+    border-radius: .2em;
+    transition: all .2s ease-in;
+}
+#tabContent1 .buttons a:hover {
+    color: var(--mint);
+    border-color: var(--mint);
+}
+#tabContent2 .project {
+    height: 6em;
+    width: 80%;
+    background-color: transparent;
+    border: .15em solid var(--focus);
+    border-radius: .2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+#tabContent2 .project .project-header {
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    font-size: .9em;
+}
+#tabContent2 .project .project-header a {
+    color: var(--mint);
+}
+#tabContent2 .project .project-header a .icon {
+    margin-right: .5em;
+}
+#tabContent2 .project .project-info {
+    margin-left: 1em;
+    font-size: .9em;
+    text-transform: capitalize;
+    color: var(--focus-high);
+}
+#tabContent2 .project .project-info .icon-star {
+    margin-left: -.1em;
+    margin-right: .3em;
+}
+#tabContent2 .project .project-info .icon {
+    margin-right: .5em;
+}
+#tabContent3 {
+    justify-content: center;
+    gap: .5em;
+}
+#tabContent3 p {
+    text-transform: capitalize;
+    font-size: .9em;
+}
+#tabContent3 .social {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+#tabContent3 .social a {
+    font-size: 1.2em;
+    color: var(--focus-high);
+    transition: all .2s ease-in;
+}
+#tabContent3 .social a:hover {
+    color: var(--mint);
+}
+#tabContent3 .attiribution {
+    margin-top: 2em;
+}
+#tabContent3 .attiribution p a {
+    color: var(--mint);
+    text-transform: capitalize;
+}
